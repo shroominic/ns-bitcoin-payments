@@ -31,7 +31,8 @@ async def home() -> str:
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lightning Payment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>⚡ NS Lightning Payments</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
@@ -308,6 +309,48 @@ async def home() -> str:
         }
         .powered-by a:hover {
             color: #888;
+        }
+        
+        @media (max-width: 640px) {
+            body { padding: 12px; }
+            .container { 
+                padding: 24px 20px;
+                border-radius: 16px;
+            }
+            h1 { 
+                font-size: 24px;
+                margin-bottom: 24px;
+            }
+            label { font-size: 13px; }
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            .service-card {
+                padding: 16px 12px;
+                border-radius: 12px;
+            }
+            .service-icon { font-size: 28px; }
+            .service-name { font-size: 14px; }
+            .amount-input-wrapper input {
+                padding: 18px 60px 18px 18px;
+                font-size: 24px;
+            }
+            .currency-label { font-size: 20px; }
+            button { 
+                padding: 18px;
+                font-size: 17px;
+                border-radius: 14px;
+            }
+            .sats-amount { font-size: 22px; }
+            .invoice-text { font-size: 10px; }
+            .copy-btn { 
+                padding: 14px 20px;
+                font-size: 15px;
+            }
+            .warning { font-size: 10px; }
+            .powered-by { font-size: 10px; }
+            .merchant-info { font-size: 12px; }
         }
     </style>
 </head>
