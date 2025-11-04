@@ -39,6 +39,7 @@ async def home() -> str:
             background: #0a0a0a;
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 20px;
@@ -275,6 +276,39 @@ async def home() -> str:
         .merchant-info a:hover {
             text-decoration: underline;
         }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            max-width: 480px;
+            width: 100%;
+        }
+        .warning {
+            padding: 10px;
+            margin-bottom: 12px;
+            font-size: 11px;
+            color: #555;
+            line-height: 1.4;
+        }
+        .warning a {
+            color: #666;
+            text-decoration: none;
+        }
+        .warning a:hover {
+            color: #888;
+            text-decoration: underline;
+        }
+        .powered-by {
+            font-size: 11px;
+            color: #444;
+        }
+        .powered-by a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .powered-by a:hover {
+            color: #888;
+        }
     </style>
 </head>
 <body>
@@ -306,6 +340,15 @@ async def home() -> str:
                 <div class="invoice-text" id="invoice"></div>
                 <button class="copy-btn" onclick="copyInvoice()">📋 Copy Invoice</button>
             </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="warning">
+            Use at your own risk. Developer not responsible for any loss.<br>
+            You can <a href="https://github.com/shroominic/ns-bitcoin-payments" target="_blank">review code and self-host</a> on GitHub.
+        </div>
+        <div class="powered-by">
+            Powered by <a href="https://ns.rozo.ai" target="_blank">Rozo</a> and <a href="https://swap.lendasat.com" target="_blank">Lendasat</a>
         </div>
     </div>
     <script>
