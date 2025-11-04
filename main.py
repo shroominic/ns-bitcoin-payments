@@ -11,10 +11,11 @@ async def main() -> None:
     )
     print(f"Payment created: {receiving_address} - {usdc_amount} USDC")
 
-    ln_invoice, preimage = await create_ln_payment_for_rozo(
+    ln_invoice, preimage, sats_required = await create_ln_payment_for_rozo(
         receiving_address=receiving_address, usd_amount=usdc_amount
     )
-    print(f"\nLightning Invoice: {ln_invoice}")
+    print(f"Amount: ₿{sats_required}")
+    print(f"Invoice: {ln_invoice}")
     print(f"Preimage (keep safe!): {preimage}")
 
 
